@@ -1,0 +1,48 @@
+<html>
+ <head>
+  <title>Texturing Suzanne with WebGL</title>
+  <script type="text/javascript" src="mat4.js"></script>
+  <!-- script type="text/javascript" src="j3d.js"></script -->
+  <script type="text/javascript" src="suzanne.js"></script>
+  <script type="text/javascript" src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+  <script type="text/javascript">
+    function supports_canvas() {
+      return !!document.createElement('canvas').getContext;
+    }
+    function supports_webgl() {
+      return !!window.WebGLRenderingContext;
+    }
+  </script>
+ </head>
+ <body onload="onready();" style="width:960;margin:auto">
+  <center>
+   <h1>Texturing Suzanne with WebGL</h1>
+   <!-- BERGIN Tests -->
+   <script>
+    document.write('<p>JavaScript is <span style="color:00B000">enabled</span>, ');
+    if (supports_canvas()) {
+     document.write('HTML5 is <span style="color:00B000">supported</span> and ');
+      if (supports_webgl()) {
+       document.write('WebGL is <span style="color:00B000">supported</span>.<br /><br /><em> Note: If you do not see anything below, please refer to the official <a href="http://get.webgl.org/" target="_blank">WebGL</a> site for more information on your soft- and hardware configuration. You might need to upgrade your graphic drivers.</em></p>');
+       document.write('<canvas id="suzanne" width="960" height="640">It\'s impossible you can read this. Free beer if you do can.</canvas>');
+      } else {
+       document.write('WebGL is <span style="color:B00000">not supported</span>! Please, refer to the official <a href="http://get.webgl.org/" target="_blank">WebGL</a> site for more information on your soft- and hardware configuration.</p>');
+      }
+    } else {
+     document.write('HTML5 canvas-element is <span style="color:B00000">not supported</span>! Please, update your browser in order to display WebGL content.</p>');
+    }
+   </script>
+   <noscript>
+     <p>JavaScript is <span style="color:B00000">disabled</span>! Please, enable JavaScript to display WebGL content.</p>
+   </noscript>
+   <!-- END Tests -->
+  <h3>@TODO</h3>
+  <p><em>@TODO</em></p>
+  <!-- language: lang-js -->
+  </center>
+  <p><pre class="prettyprint">@TODO</pre></p>
+  <center>
+<p>Full source is available on <a href="http://github.com/donschoe/webgl-suzanne-texture" target="_blank">github.com/donschoe/webgl-suzanne-texture</a>. The WebGL-code is inspired by the <a href="https://gist.github.com/jay3sh/1173433" target="_blank">minimum-opengles-code.html by jay3sh</a> and based on the <a href="http://internetexception.com/post/2013/02/25/Line-in-WebGL-and-why-you-gonna-do-this-on-your-own.aspx" target="_blank">code to draw simple lines by n.podbielski</a>. The texture shading was made possible by the WebGL engine <a href="http://www.netmagazine.com/tutorials/create-amazing-webgl-effects-shaders" target="_blank">J3D by Bartek Drozdz</a>. Used <code>mat4.js</code> from the <a href="https://github.com/toji/gl-matrix" target="_blank">glMatrix project by toji</a>. The monkey <a href="http://en.wikipedia.org/wiki/Suzanne_%28Blender_primitive%29#Suzanne" target="_blank">Suzanne by SLiD3</a> used to be the free blender test model. Use github to raise issues or add comments to the code.</p>
+  </center>
+ </body>
+</html>
